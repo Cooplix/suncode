@@ -1,0 +1,29 @@
+.columns {
+  margin-bottom: 3em;
+
+  .column {
+    margin-left: 0 !important;
+  }
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.btn {
+  width: 5em;
+}
+
+.controlPanel {
+  margin-top: 3em;
+  margin-bottom: 3em;
+  gap: 3em;
+  width: 5em;
+  display: flex;
+  flex-direction: row;
+
+}
+
+
