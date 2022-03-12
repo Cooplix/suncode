@@ -15,8 +15,8 @@ const Routing: React.FunctionComponent<IRoutingProps> = () => (
       <PublicRoute exact path="/column/:columnId" component={ColumnView}/>
       <div>
         <Switch>
-          <Route path="/*">
-            <PublicRoute exact path="/public" component={TestView}/>
+          <Route path="*">
+            <PublicRoute exact path="*" component={TestView}/>
           </Route>
         </Switch>
       </div>
