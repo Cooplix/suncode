@@ -1,6 +1,6 @@
 package com.example.suncode.column;
 
-import com.example.suncode.db.Test;
+import com.example.suncode.db.Column;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,12 +20,12 @@ public class ColumnController {
 
 
 	@GetMapping("/unique/{id}")
-	public List<Test> getUniqueColumns(@PathVariable String id) {
+	public List<Column> getUniqueColumns(@PathVariable String id) {
 		return userService.getUniqueColumns(id);
 	}
 
 	@GetMapping("/notUnique/{id}")
-	public List<Test> getNotUniqueColumns(@PathVariable String id) {
+	public List<Column> getNotUniqueColumns(@PathVariable String id) {
 		return userService.getNotUniqueColumns(id);
 	}
 }

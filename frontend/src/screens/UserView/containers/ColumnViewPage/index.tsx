@@ -24,7 +24,7 @@ const ColumnViewPage: React.FC = () => {
 
   const [option, setOption] = useState('');
 
-  const click = () => {
+  const pushToColumnView = () => {
     history.push(`/column/${option}`);
   };
 
@@ -43,7 +43,7 @@ const ColumnViewPage: React.FC = () => {
           options={options}
           onChange={handleDropDownSelect}
         />
-        <button type="submit" onClick={click}>CLICK</button>
+        <button type="submit" onClick={pushToColumnView}>CLICK</button>
       </div>
     </div>
   );

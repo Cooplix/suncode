@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.Hibernate;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -14,30 +13,30 @@ import java.util.Objects;
 @Entity
 @Table(name = "tabela_testowa")
 @Data
-public class Test {
+public class Column {
 
     @Id
-    @Column(unique = true, nullable = false)
+    @javax.persistence.Column(unique = true, nullable = false)
     @EqualsAndHashCode.Include
     private BigInteger id;
 
-    @Column
+    @javax.persistence.Column
     private String kolumna1;
 
-    @Column
+    @javax.persistence.Column
     private String kolumna2;
 
-    @Column
+    @javax.persistence.Column
     private String kolumna3;
 
-    @Column
+    @javax.persistence.Column
     private BigInteger kolumna4;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Test test = (Test) o;
+        Column test = (Column) o;
         return id != null && Objects.equals(id, test.id);
     }
 

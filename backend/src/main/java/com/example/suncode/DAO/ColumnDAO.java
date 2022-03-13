@@ -1,7 +1,7 @@
 package com.example.suncode.DAO;
 
 
-import com.example.suncode.db.Test;
+import com.example.suncode.db.Column;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -20,7 +20,7 @@ public class ColumnDAO {
 		this.jdbcTemplate = jdbcTemplate;
 	}
 
-	public List<Test> getUniq(String mainColumn, String secondColumn, String thirdColumn) {
+	public List<Column> getUniqueColumn(String mainColumn, String secondColumn, String thirdColumn) {
 		return new ArrayList<>(jdbcTemplate.query("select * " +
 						" from tabela_testowa t1 " +
 						" where not exists ( " +
@@ -31,10 +31,10 @@ public class ColumnDAO {
 						"                   " + thirdColumn + " = " + mainColumn + " " +
 						"            ) " +
 						"    )",
-				new BeanPropertyRowMapper<>(Test.class)));
+				new BeanPropertyRowMapper<>(Column.class)));
 	}
 
-	public List<Test> getNotUniq(String mainColumn, String secondColumn, String thirdColumn) {
+	public List<Column> getNotUnique(String mainColumn, String secondColumn, String thirdColumn) {
 		return new ArrayList<>(jdbcTemplate.query("select * " +
 						" from tabela_testowa t1 " +
 						" where exists ( " +
@@ -45,6 +45,6 @@ public class ColumnDAO {
 						"                   " + thirdColumn + " = " + mainColumn + " " +
 						"            ) " +
 						"    )",
-				new BeanPropertyRowMapper<>(Test.class)));
+				new BeanPropertyRowMapper<>(Column.class)));
 	}
 }

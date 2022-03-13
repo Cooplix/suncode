@@ -15,7 +15,7 @@ export interface IUserViewProps extends IState, IActions {
 
 interface IState {
   columns: IColumn[];
-  sendingData: boolean;
+  endSendingData: boolean;
 }
 
 interface IActions {
@@ -28,7 +28,7 @@ export const ColumnsView: React.FC<IUserViewProps> = (
     fetchUniqData,
     fetchNotUniqData,
     columns,
-    sendingData
+    endSendingData
   }
 ) => {
   const [uniq, setUniq] = useState(true);
@@ -78,7 +78,7 @@ export const ColumnsView: React.FC<IUserViewProps> = (
             onChange={handleToggleSelect}
           />
         </div>
-        <LoaderWrapper loading={sendingData}>
+        <LoaderWrapper loading={endSendingData}>
           <List className={styles.column} as="ol">
             {columns.map(col => (
               <List.Item>
@@ -100,7 +100,7 @@ export const ColumnsView: React.FC<IUserViewProps> = (
 
 const mapStateToProps: (state) => IState = state => ({
   columns: state.userViewReducer.data.column,
-  sendingData: state.userViewReducer.data.endSendingUser
+  endSendingData: state.userViewReducer.data.endSendingUser
 });
 
 const mapDispatchToProps: IActions = {

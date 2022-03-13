@@ -1,6 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import TestView from '@screens/UserView/containers/ColumnViewPage';
+import MainViewPage from '@screens/UserView/containers/ColumnViewPage';
 import PublicRoute from '@components/PublicRoute';
 import ColumnView from '@components/Columns';
 
@@ -16,7 +16,7 @@ const Routing: React.FunctionComponent<IRoutingProps> = () => (
       <div>
         <Switch>
           <Route path="*">
-            <PublicRoute exact path="*" component={TestView}/>
+            <PublicRoute exact path="*" component={MainViewPage}/>
           </Route>
         </Switch>
       </div>

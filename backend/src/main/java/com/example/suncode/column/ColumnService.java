@@ -1,11 +1,10 @@
 package com.example.suncode.column;
 
 import com.example.suncode.DAO.ColumnDAO;
-import com.example.suncode.db.Test;
+import com.example.suncode.db.Column;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -13,7 +12,6 @@ import java.util.List;
 public class ColumnService {
 
 	private final ColumnDAO columnDAO;
-	private List<String> columnsList = new ArrayList<>();
 	private String mainColumn;
 	private String secondColumn;
 	private String thirdColumn;
@@ -44,19 +42,19 @@ public class ColumnService {
 	}
 
 
-	public List<Test> getUniqueColumns(String column) {
+	public List<Column> getUniqueColumns(String column) {
 		choseColumns(column);
 		return columnDAO
-				.getUniq(
+				.getUniqueColumn(
 						mainColumn,
 						secondColumn,
 						thirdColumn);
 	}
 
-	public List<Test> getNotUniqueColumns(String column) {
+	public List<Column> getNotUniqueColumns(String column) {
 		choseColumns(column);
 		return columnDAO
-				.getNotUniq(
+				.getNotUnique(
 						mainColumn,
 						secondColumn,
 						thirdColumn);
