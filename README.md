@@ -32,8 +32,5 @@ Project does not use git flow
 In root folder:
 
 ```
-cd backend
-mvn clean install
-cd ..
-docker-compose up -d --build
+./run.bat
 ```
