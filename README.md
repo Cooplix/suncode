@@ -29,4 +29,9 @@ Licensed under the [MIT](LICENSE.txt) license.
 
 In root folder:
 
-`docker-compose up -d --build`
+```
+cd backend
+mvn clean install
+cd ..
+docker-compose up -d --build
+```
