@@ -1,7 +1,5 @@
 # SunCode | 2022
 
-## [HR Service](http://google.com/)
-
 # Technical side
 
 ## Tech stack
@@ -14,7 +12,7 @@
     - Hibernate - ORM for easy(but not simple) data access
     - Flyweight - migration tool
 - Database
-    - Postgresql
+  - Postgresql
 - Frontend
   - TypeScript (and JavaScript) - primary SPA implementation
   - React - SPA library
@@ -24,6 +22,10 @@
 ## License
 
 Licensed under the [MIT](LICENSE.txt) license.
+
+## Miscellaneous
+
+Project does not use git flow
 
 # Run
 

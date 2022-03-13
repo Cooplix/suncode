@@ -1,12 +1,12 @@
 import {all, call, put, takeEvery} from 'redux-saga/effects';
-import userServices from '@screens/UserView/services/userServices';
+import columnServices from '@screens/UserView/services/columnServices';
 import {getNotUniqRoutine, getUniqRoutine} from '@screens/UserView/routines';
 import {toastr} from 'react-redux-toastr';
 
 export default function* userViewPageSagas() {
   function* getUniq(action) {
     try {
-      const res = yield call(userServices.getUniq, action.payload);
+      const res = yield call(columnServices.getUniq, action.payload);
       const columns = {
         columns: res
       };
@@ -21,7 +21,7 @@ export default function* userViewPageSagas() {
 
   function* getNotUniq(action) {
     try {
-      const res = yield call(userServices.getNotUniq, action.payload);
+      const res = yield call(columnServices.getNotUniq, action.payload);
       const columns = {
         columns: res
       };

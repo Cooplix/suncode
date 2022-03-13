@@ -1,6 +1,6 @@
 import api from '@helpers/api.helper';
 
-const userServices = {
+const columnServices = {
 
   getUniq: async id => api.get(
     `/api/table/unique/${id}`
@@ -11,4 +11,4 @@ const userServices = {
   )
 };
 
-export default userServices;
+export default columnServices;

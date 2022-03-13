@@ -3,7 +3,7 @@ import styles from './styles.module.scss';
 import {Dropdown} from 'semantic-ui-react';
 import {history} from '@helpers/history.helper';
 
-const UserView: React.FC = () => {
+const ColumnViewPage: React.FC = () => {
   const options = [
     {
       key: 'kolumna1',
@@ -49,4 +49,4 @@ const UserView: React.FC = () => {
   );
 };
 
-export default UserView;
+export default ColumnViewPage;
