@@ -16,25 +16,17 @@
 - Database
     - Postgresql
 - Frontend
-    - TypeScript (and JavaScript) - primary SPA implementation
-    - React - SPA library
-    - Redux - state management
-    - Redux-toolkit - async interactions, effect management
+  - TypeScript (and JavaScript) - primary SPA implementation
+  - React - SPA library
+  - Redux - state management
+  - Redux-toolkit - async interactions, effect management
 
 ## License
 
 Licensed under the [MIT](LICENSE.txt) license.
 
-# Frontend run
+# Run
 
-```
-cd frontend
-npm i
-npm start
-```
+In root folder:
 
-# Backend run
-
-```
-Run backend/src/main/java/com/example/suncode/CoreAplication
-```
+`docker-compose up -d --build`
