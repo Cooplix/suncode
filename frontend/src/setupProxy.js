@@ -9,8 +9,6 @@ const apiProxy = proxy('/api', {
   }
 })
 
-const oauth2Proxy = proxy('/oauth2', {target: 'http://localhost:5000'})
-
 module.exports = function (app) {
-  app.use(apiProxy, oauth2Proxy);
+  app.use(apiProxy);
 };
