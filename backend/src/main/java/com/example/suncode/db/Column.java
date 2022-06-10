@@ -32,6 +32,9 @@ public class Column {
     @javax.persistence.Column
     private BigInteger kolumna4;
 
+    @javax.persistence.Column
+    private BigInteger kolumna4;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
